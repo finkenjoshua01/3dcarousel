@@ -5,3 +5,11 @@ import { mergeOptions } from './utils/object'
 import { toInt, isObject, isArray } from './utils/unit'
 
 import EventsBus from './core/event/events-bus'
+
+export default class Glide {
+  /**
+   * Construct glide.
+   *
+   * @param  {String} selector
+   * @param  {Object} options
+   */
