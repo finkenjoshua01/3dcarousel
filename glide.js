@@ -13,3 +13,8 @@ export default class Glide {
    * @param  {String} selector
    * @param  {Object} options
    */
+
+  constructor (selector, options = {}) {
+    this._c = {}
+    this._t = []
+    this._e = new EventsBus()
