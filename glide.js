@@ -18,3 +18,9 @@ export default class Glide {
     this._c = {}
     this._t = []
     this._e = new EventsBus()
+
+      this.disabled = false
+    this.selector = selector
+    this.settings = mergeOptions(defaults, options)
+    this.index = this.settings.startAt
+  }
