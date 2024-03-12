@@ -24,3 +24,24 @@ export default class Glide {
     this.settings = mergeOptions(defaults, options)
     this.index = this.settings.startAt
   }
+
+
+ /**
+   * Initializes glide.
+   *
+   * @param {Object} extensions Collection of extensions to initialize.
+   * @return {Glide}
+   */
+  mount (extensions = {}) {
+    this._e.emit('mount.before')
+
+    if (isObject(extensions)) {
+      this._c = mount(this, extensions, this._e)
+    } else {
+      warn('You need to provide a object on `mount()`')
+    }
+
+    this._e.emit('mount.after')
+
+    return this
+  }
