@@ -45,3 +45,20 @@ export default class Glide {
 
     return this
   }
+
+  
+ /**
+   * Collects an instance `translate` transformers.
+   *
+   * @param  {Array} transformers Collection of transformers.
+   * @return {Void}
+   */
+  mutate (transformers = []) {
+    if (isArray(transformers)) {
+      this._t = transformers
+    } else {
+      warn('You need to provide a array on `mutate()`')
+    }
+
+    return this
+  }
