@@ -62,3 +62,22 @@ export default class Glide {
 
     return this
   }
+
+  
+/**
+   * Updates glide with specified settings.
+   *
+   * @param {Object} settings
+   * @return {Glide}
+   */
+  update (settings = {}) {
+    this.settings = mergeOptions(this.settings, settings)
+
+    if (settings.hasOwnProperty('startAt')) {
+      this.index = settings.startAt
+    }
+
+    this._e.emit('update')
+
+    return this
+  }
