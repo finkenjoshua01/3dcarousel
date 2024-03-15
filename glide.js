@@ -81,3 +81,22 @@ export default class Glide {
 
     return this
   }
+
+  /**
+   * Change slide with specified pattern. A pattern must be in the special format:
+   * `>` - Move one forward
+   * `<` - Move one backward
+   * `={i}` - Go to {i} zero-based slide (eq. '=1', will go to second slide)
+   * `>>` - Rewinds to end (last slide)
+   * `<<` - Rewinds to start (first slide)
+   * `|>` - Move one viewport forward
+   * `|<` - Move one viewport backward
+   *
+   * @param {String} pattern
+   * @return {Glide}
+   */
+  go (pattern) {
+    this._c.Run.make(pattern)
+
+    return this
+  }
