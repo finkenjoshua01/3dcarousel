@@ -100,3 +100,16 @@ export default class Glide {
 
     return this
   }
+
+  /**
+   * Move track by specified distance.
+   *
+   * @param {String} distance
+   * @return {Glide}
+   */
+  move (distance) {
+    this._c.Transition.disable()
+    this._c.Move.make(distance)
+
+    return this
+  }
