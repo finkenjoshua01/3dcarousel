@@ -113,3 +113,27 @@ export default class Glide {
 
     return this
   }
+
+/**
+   * Destroy instance and revert all changes done by this._c.
+   *
+   * @return {Glide}
+   */
+  destroy () {
+    this._e.emit('destroy')
+
+    return this
+  }
+
+  /**
+   * Start instance autoplaying.
+   *
+   * @param {Boolean|Number} interval Run autoplaying with passed interval regardless of `autoplay` settings
+   * @return {Glide}
+   */
+  play (interval = false) {
+    if (interval) {
+      this.settings.autoplay = interval
+    }
+
+    this._e.emit('play')
