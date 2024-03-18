@@ -137,3 +137,18 @@ export default class Glide {
     }
 
     this._e.emit('play')
+
+    
+return this
+  }
+
+  /**
+   * Stop instance autoplaying.
+   *
+   * @return {Glide}
+   */
+  pause () {
+    this._e.emit('pause')
+
+    return this
+  }
