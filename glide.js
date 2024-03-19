@@ -152,3 +152,11 @@ return this
 
     return this
   }
+
+  /**
+   * Sets glide into a idle status.
+   *
+   * @return {Glide}
+   */
+  disable () {
+    this.disabled = true
