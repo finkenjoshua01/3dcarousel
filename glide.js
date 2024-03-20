@@ -160,3 +160,18 @@ return this
    */
   disable () {
     this.disabled = true
+
+    
+   return this
+  }
+
+  /**
+   * Sets glide into a active status.
+   *
+   * @return {Glide}
+   */
+  enable () {
+    this.disabled = false
+
+    return this
+  }
