@@ -175,3 +175,16 @@ return this
 
     return this
   }
+
+ /**
+   * Adds cuutom event listener with handler.
+   *
+   * @param  {String|Array} event
+   * @param  {Function} handler
+   * @return {Glide}
+   */
+  on (event, handler) {
+    this._e.on(event, handler)
+
+    return this
+  }
