@@ -188,3 +188,14 @@ return this
 
     return this
   }
+
+  
+ /**
+   * Checks if glide is a precised type.
+   *
+   * @param  {String} name
+   * @return {Boolean}
+   */
+  isType (name) {
+    return this.settings.type === name
+  }
