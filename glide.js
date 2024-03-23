@@ -199,3 +199,12 @@ return this
   isType (name) {
     return this.settings.type === name
   }
+
+  /**
+   * Gets value of the core options.
+   *
+   * @return {Object}
+   */
+  get settings () {
+    return this._o
+  }
