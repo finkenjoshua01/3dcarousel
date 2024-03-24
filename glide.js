@@ -208,3 +208,17 @@ return this
   get settings () {
     return this._o
   }
+
+  /**
+   * Sets value of the core options.
+   *
+   * @param  {Object} o
+   * @return {Void}
+   */
+  set settings (o) {
+    if (isObject(o)) {
+      this._o = o
+    } else {
+      warn('Options must be an `object` instance.')
+    }
+  }
